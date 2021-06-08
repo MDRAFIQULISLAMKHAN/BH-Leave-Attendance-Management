@@ -1,0 +1,72 @@
+﻿@model TW.Models.PublicViewModel
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.HiddenFor(x => Model.ProjectSubCategory.Id)
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="inner-heading">
+                    <ul class="breadcrumb">
+                        <li><a href="/Home/">Home</a> <i class="icon-angle-right"></i></li>
+                        <li><a href="/Home/ProductCategory">All Categories</a> <i class="icon-angle-right"></i></li>
+                        <li class="active">Products</li>
+                    </ul>
+                    <h2>Our Products</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="project-details">
+    <div class="container">
+        <div class="row">
+            @if (Model.Projects.Any() && Model.Projects.Count > 0)
+            {
+                foreach (var cat in Model.Projects)
+                {
+                    //var imagePath = "http://adminmzbd.thebyteheart.com/" + cat.ImageUrl;
+                    var imagePath = cat.ImageUrl;
+                    <div class="span4 box-project">
+                        <a href="/Home/ProductDetails/@cat.Id">
+                            <div class="service-box project-box aligncenter flyIn">
+                                <h5>@Html.Raw(cat.ProjectName)</h5>
+                                <div class="icon">
+                                    <img src="@imagePath" alt="" />
+                                </div>
+                                @if (cat.DiscountPrice > 0)
+                                {
+                                    <div class="product-price">
+                                        <span class="text-blue product-price-card">Price:</span> <span class="strikeText product-price-card">৳ @cat.Price</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="text-blue product-price-card">Discount Price:</span> <span class="product-price-card">৳ @cat.DiscountPrice</span>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="product-price">
+                                        <span class="text-blue product-price-card">Price:</span> <span class="product-price-card">৳ @cat.Price</span>
+                                    </div>
+                                }
+                            </div>
+                        </a>
+                    </div>
+                }
+            }
+            else
+            {
+                <h2>No products found. Checkout other <a href="/Home/ProductCategory" class="blue-text">Categories</a>.</h2>
+            }
+
+        </div>
+    </div>
+
+
+</section>
+
+@Html.Partial("~/Views/Partial/_specialpriceadds.cshtml", Model)
+

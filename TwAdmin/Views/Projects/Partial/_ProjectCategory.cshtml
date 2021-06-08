@@ -1,0 +1,33 @@
+﻿@model TW.Models.AdminViewModel
+
+<style>
+    option {
+        background-color: #6f6f6f;
+    }
+</style>
+
+<div class="form-horizontal">
+
+    @*<div class="form-group">
+        @Html.LabelFor(model => model.ProjectCategory.Name, new { @class = "card-body__title" })
+        @Html.DropDownListFor(model => model.ProjectCategory.Name, ViewBag.CategoryList as SelectList, "Category Names", new { @class = "form-control ddlbg" })
+        @Html.ValidationMessageFor(model => model.ProjectCategory.Name, "", new { @class = "text-danger" })
+    </div>*@
+
+    @*<div class="form-group">
+        @Html.LabelFor(model => model.Project.ImageUrl, new { @class = "card-body__title" })
+        <div class="card">
+            <div class="card-body">
+                <span class="control-label col-md-2">Upload Images:</span>
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.File, new { type = "file", id = "file" })
+                    @Html.ValidationMessageFor(model => model.File, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+    <div class="form-group">
+        <strong>Move to next Tab</strong>
+    </div>
+</div>

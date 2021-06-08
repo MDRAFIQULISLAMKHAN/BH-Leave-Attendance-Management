@@ -1,0 +1,56 @@
+﻿@model TW.Models.AdminViewModel
+
+@{
+    ViewBag.Title = "GalleryList";
+}
+
+@{
+    var Id = ViewBag.ProjectId;
+}
+
+
+<nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Projects/Index">Projects</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Galleries</li>
+    </ol>
+</nav>
+<header class="content__title">
+    <h1>Gallery</h1>
+
+    <div class="actions">
+        <a href="~/Projects/CreateGallery/@Id" class="actions__item zmdi zmdi-plus zmdi-hc-fw" title="Create"></a>
+        <a href="~/Projects/GalleryList/@Id" class="actions__item zmdi zmdi-refresh zmdi-hc-fw" title="Refresh"></a>
+    </div>
+</header>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            <a href="~/Projects/CreateGallery/@Id" class="btn btn-light btn--icon-text" title="Create"><i class="zmdi  zmdi-plus-circle-o zmdi-hc-fw"></i> Create New</a>
+        </h4>
+        <div class="table-responsive">
+            <table id="data-table" class="table">
+                <thead>
+                    <tr>
+                        <th>Images</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.ProjectGalleryList)
+                    {
+                        <tr>
+                            <td>
+                                <img src="@item.ImageUrl" width="100" height="100" alt="Office" />
+                            </td>
+                            <td>
+                                @Html.ActionLink(" ", "DeleteGalleryItem", new { @item.Id }, new { @class = "actions__item zmdi zmdi-delete zmdi-hc-fw", onclick = "return confirm('Are you sure you want to delete this item?')" })
+                                @Html.ActionLink(" ", "UpdateProject", new { Id = item.Id }, new { @class = "zmdi zmdi-edit", title = "Edit Item", data_toggle = "tooltip", data_placement = "top" })&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

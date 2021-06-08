@@ -1,0 +1,99 @@
+﻿@model TW.Models.PublicViewModel
+@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="inner-heading">
+                    <ul class="breadcrumb">
+                        <li><a href="/Home/">Home</a> <i class="icon-angle-right"></i></li>
+                        <li class="active">Gallery</li>
+                    </ul>
+                    <h2>@Html.Raw(Model.Project.ProjectName)</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="content" class="alt-bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <p>Signage Consultant: @Html.Raw(Model.Project.ArchitectName)</p>
+                <p>Signage Contractor: @Html.Raw(Model.Project.Consultant_Contractor)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery-content ">
+
+    <div class="container">
+        
+        <div class="row" id="tzcontent">
+            <div class="loader-wrapper">
+                <span class="loader"><span class="loader-inner"></span></span>
+            </div>
+
+            <div class="grid cs-style-4 ">
+
+                <div class="tz-gallery">
+
+                    <div class="row" id="imges">
+                        @foreach (var data in Model.ProjectGalleries)
+                        {
+                            var imagePath = "http://adminmzbd.thebyteheart.com/" + data.ImageUrl;
+                            <div class="span6">
+
+
+                                <div class="thumbnail" >
+                                    <a class="lightbox" href="@imagePath">
+                                        <img src="@imagePath" alt="Bridge">
+                                       
+                                    </a>
+                                   
+                                        <p style="margin-top: 10px; text-align: left"><b>Details:</b> @data.ImageDetails </p>
+                                  
+                                </div>
+
+
+
+                            </div>
+
+                        }
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="content" class="alt-bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <p>Location: @Html.Raw(Model.Project.ProjectLocation)</p>
+                <p>Details: @Html.Raw(Model.Project.ShortDetails)</p>
+            </div>
+        </div>
+    </div>
+</section>
+

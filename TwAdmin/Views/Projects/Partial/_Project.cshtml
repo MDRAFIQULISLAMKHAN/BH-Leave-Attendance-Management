@@ -1,0 +1,64 @@
+﻿@model TW.Models.AdminViewModel
+<style>
+    option {
+        background-color: #6f6f6f;
+    }
+</style>
+
+<div class="form-horizontal">
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Project.ProjectName, new { @class = "card-body__title" })
+        @Html.TextBoxFor(model => model.Project.ProjectName, new { @class = "form-control", placeHolder = "Give a Project Name" })
+        @Html.ValidationMessageFor(model => model.Project.ProjectName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Project.Price, new { @class = "card-body__title" })
+        @Html.TextBoxFor(model => model.Project.Price, new { @class = "form-control", placeHolder = "E.g. Dhaka" })
+        @Html.ValidationMessageFor(model => model.Project.Price, "", new { @class = "text-danger" })
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Project.DiscountPrice, new { @class = "card-body__title" })
+        @Html.TextBoxFor(model => model.Project.DiscountPrice, new { @class = "form-control", PlaceHolder = "For whom the project was" })
+        @Html.ValidationMessageFor(model => model.Project.DiscountPrice, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Project.Description, new { @class = "card-body__title" })
+        @Html.TextBoxFor(model => model.Project.Description, new { @class = "form-control", PlaceHolder = "Consultant Contractor" })
+        @Html.ValidationMessageFor(model => model.Project.Description, "", new { @class = "text-danger" })
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.Project.ShortDetails, new { @class = "card-body__title" })
+        @Html.TextBoxFor(model => model.Project.ShortDetails, new { @class = "form-control", PlaceHolder = "Short details about the project" })
+        @Html.ValidationMessageFor(model => model.Project.ShortDetails, "", new { @class = "text-danger" })
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.ProjectCategory.Name, new { @class = "card-body__title" })
+        @Html.DropDownListFor(model => model.Project.ProjectCategoryId, ViewBag.CategoryList as SelectList, "Category Names", new { @class = "form-control ddlbg" })
+        @Html.ValidationMessageFor(model => model.Project.ProjectCategoryId, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Project.ImageUrl, new { @class = "card-body__title" })
+        <div class="card">
+            <div class="card-body">
+                <span class="control-label col-md-2">Upload Images:</span>
+                <div class="col-md-10">
+                    @*<input type="file" name="files" id="file" class="btn btn-success" />*@
+                    @Html.TextBoxFor(model => model.File, new { type = "file", id = "file" })
+                    @Html.ValidationMessageFor(model => model.File, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <strong>Move to next Tab</strong>
+    </div>
+</div>

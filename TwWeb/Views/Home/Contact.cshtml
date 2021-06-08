@@ -1,0 +1,86 @@
+﻿@using Vereyon.Web
+@model TW.Models.PublicViewModel
+@{
+    ViewBag.Title = "Contact";
+}
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="inner-heading">
+                    <ul class="breadcrumb">
+                        <li><a href="/Home/">Home</a> <i class="icon-angle-right"></i></li>
+                        <li class="active">Contact</li>
+                    </ul>
+                    <h2>Contact Us</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="span8">
+                <h4>Get in touch with us by filling contact form below</h4>
+                @if (!string.IsNullOrEmpty(Model.EmailStatus))
+                {
+                    @Html.Raw(Model.EmailStatus)
+                }
+                @*<div id="sendmessage">Your message has been sent. Thank you!</div>
+                    <div id="errormessage"></div>*@
+                @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "contactForm" }))
+                {
+                    <div class="row">
+                        <div class="span4 form-group field">
+                            @Html.TextBoxFor(model => model.Feedback.Name, new { @class = "", @id = "name", placeholder = "Your Name", data_rule = "minlen:4", data_msg = "Please enter at least 4 chars" })
+                            @Html.ValidationMessageFor(model => model.Feedback.Name, "", new { @class = "red-text" })
+                        </div>
+
+                        <div class="span4 form-group">
+                            @Html.TextBoxFor(model => model.Feedback.Email, new { @class = "", @id = "email", placeholder = "Your Email", data_rule = "email", data_msg = "Please enter a valid email" })
+                            @Html.ValidationMessageFor(model => model.Feedback.Email, "", new { @class = "red-text" })
+                        </div>
+
+                        <div class="span8 form-group">
+                            @Html.TextBoxFor(model => model.Feedback.Subject, new { @class = "", @id = "subject", placeholder = "Subject", data_rule = "email", data_msg = "Please enter at least 8 chars of subject" })
+                            @Html.ValidationMessageFor(model => model.Feedback.Subject, "", new { @class = "red-text" })
+                        </div>
+
+                        <div class="span8 form-group">
+                            @Html.TextAreaFor(model => model.Feedback.Message, new { rows = "5", data_rule = "required", data_msg = "Please write something for us", placeholder = "Message" })
+                            @Html.ValidationMessageFor(model => model.Feedback.Message, "", new { @class = "red-text" })
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-theme btn-medium margintop10" type="submit">Send a message</button>
+                        </div>
+                    </div>
+                }
+
+            </div>
+            <div class="span4">
+                <div class="clearfix"></div>
+                <aside class="right-sidebar">
+
+                    <div class="widget">
+                        <h5 class="widgetheading">Contact information<span></span></h5>
+
+                        <ul class="contact-info">
+                            <li>
+                                <label>Address :</label><strong> @Html.Raw(Model.CompanySetting.CompanyName)</strong><br /> @Html.Raw(Model.CompanySetting.CompanyAddress)
+                            </li>
+                            <li><label>Phone :</label> @Html.Raw(Model.CompanySetting.MainContactNo) @Html.Raw(Model.CompanySetting.ContactNo)</li>
+                            <li><label>Email : </label> @Html.Raw(Model.CompanySetting.Email_1) @Html.Raw(Model.CompanySetting.Email_2)</li>
+                        </ul>
+
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+        <div class="map-loc">
+            @Html.Raw(Model.CompanySetting.GMapLocation)
+        </div>
+    </div>
+</section>

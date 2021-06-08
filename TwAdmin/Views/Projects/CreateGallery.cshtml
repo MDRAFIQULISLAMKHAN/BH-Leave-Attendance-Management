@@ -1,0 +1,47 @@
+﻿@model TW.Models.AdminViewModel
+@{
+    ViewBag.Title = "CreateGallery";
+}
+
+
+<nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Projects/Index">Projects</a></li>
+        <li class="breadcrumb-item"><a href="/Projects/GalleryList/@Model.ProjectGallery.ProjectId">Galleries</a></li>
+        <li class="breadcrumb-item active" aria-current="page">New Gallery Item</li>
+    </ol>
+</nav>
+<header class="content__title">
+    <h1>Add Gallery Item</h1>
+
+
+</header>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title"></h4>
+        <h6 class="card-subtitle"></h6>
+        @using (Html.BeginForm("CreateGallery", "Projects", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.ProjectGallery.ProjectId)
+
+                <div class="form-group">
+                    <span class="control-label col-md-2">Upload Images:</span>
+                    <div class="col-md-10">
+                        @*<input type="file" name="files" id="files" multiple />*@
+                        @Html.TextBoxFor(model => model.Files, new { type = "file", id = "files", @multiple = "multiple" })
+                        @Html.ValidationMessageFor(model => model.Files, "", new { @class = "validation-text" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Add" class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

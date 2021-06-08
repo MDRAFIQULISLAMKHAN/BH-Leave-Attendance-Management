@@ -1,0 +1,11 @@
+﻿@model TW.Models.AdminViewModel
+<div class="form-horizontal">
+    <div class="form-group">
+        <span class="control-label col-md-2">Upload Images:</span>
+        <div class="col-md-10">
+            @*<input type="file" name="files" id="files" multiple />*@
+            @Html.TextBoxFor(model => model.Files, new { type = "file", id = "files", @multiple = "multiple" })
+            @Html.ValidationMessageFor(model => model.Files, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>

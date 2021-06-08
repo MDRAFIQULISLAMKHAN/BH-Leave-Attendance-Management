@@ -1,0 +1,59 @@
+﻿@model TW.Models.PublicViewModel
+@{
+    ViewBag.Title = "Product Category";
+    var catName = Model.ProjectCategory != null ? Model.ProjectCategory.Name : "Not Found";
+}
+@Html.HiddenFor(x => Model.ProjectCategory.Id)
+<style>
+    .service-box {
+        margin-bottom: 30px;
+    }
+</style>
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="inner-heading">
+                    <ul class="breadcrumb">
+                        <li><a href="/Home/">Home</a> <i class="icon-angle-right"></i></li>
+                        <li><a href="/Home/ProductCategory">All Categories</a> <i class="icon-angle-right"></i></li>
+                        <li class="active">@catName</li>
+                    </ul>
+                    <h2>@catName</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="service-content">
+    <div class="container">
+        <div class="row">
+            @if (Model.ProjectSubCategories.Any() && Model.ProjectSubCategories.Count > 0)
+            {
+                foreach (var data in Model.ProjectSubCategories)
+                {
+                    //var imagepath = "http://adminmzbd.thebyteheart.com/" + @data.ImageUrl;
+                    var imagepath = @data.ImageUrl;
+                    <div class="span4">
+                        <a href="/Home/Products/@data.Id">
+                            <div class="service-box service-page-box aligncenter flyIn">
+                                <h5>@Html.Raw(data.Name)</h5>
+                                <div class="icon">
+                                    <img src="@imagepath" alt="" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            }
+            else
+            {
+                <h2>No products found. Checkout other <a href="/Home/ProductCategory" class="blue-text">Categories</a>.</h2>
+            }
+
+        </div>
+    </div>
+</section>
+
+@Html.Partial("~/Views/Partial/_specialpriceadds.cshtml", Model)

@@ -1,0 +1,59 @@
+﻿@model TW.Models.AdminViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item"><a href="~/Projects/Index">Project</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add Project</li>
+    </ol>
+</nav>
+
+<header class="content__title">
+    <h1>Add new Project</h1>
+    <div class="actions">
+        <a href="~/Projects/Index" class="actions__item zmdi zmdi-view-list zmdi-hc-fw" title="Back to List"></a>
+        <a href="~/Projects/Create" class="actions__item zmdi zmdi-refresh zmdi-hc-fw" title="Refresh"></a>
+    </div>
+</header>
+
+<div class="card">
+    <div class="card-body">
+
+        <div class="tab-container">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#project" role="tab">Project</a>
+                </li>
+                @*<li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#category" role="tab">Category</a>
+                </li>*@
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#gallery" role="tab">Gallery</a>
+                </li>
+            </ul>
+
+            @using (Html.BeginForm("Create", "Projects", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="tab-content">
+                    <div class="tab-pane active fade show" id="project" role="tabpanel">
+                        @Html.Partial("~/Views/Projects/Partial/_Project.cshtml", Model)
+                    </div>
+                    @*<div class="tab-pane" id="category" role="tabpanel">
+                        @Html.Partial("~/Views/Projects/Partial/_ProjectCategory.cshtml", Model)
+                    </div>*@
+                    <div class="tab-pane " id="gallery" role="tabpanel">
+                        @Html.Partial("~/Views/Projects/Partial/_Gallery.cshtml", Model)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-light" />
+                </div>
+            }
+        </div>
+    </div>
+</div>

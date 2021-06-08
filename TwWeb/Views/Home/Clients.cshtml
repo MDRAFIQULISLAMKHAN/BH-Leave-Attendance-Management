@@ -1,0 +1,32 @@
+﻿@model TW.Models.PublicViewModel
+@{
+    ViewBag.Title = "Clients";
+    var imgPath = "http://adminmzbd.thebyteheart.com/" + Model.ClientsBanner.ImageUrl;
+}
+
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="inner-heading">
+                    <ul class="breadcrumb">
+                        <li><a href="/Home/">Home</a> <i class="icon-angle-right"></i></li>
+                        <li class="active">Clients</li>
+                    </ul>
+                    <h2>Our Clients</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="clients-bg">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <img src="@imgPath"/>
+            </div>
+        </div>
+    </div>
+</section>
+@Html.Partial("~/Views/Partial/_specialpriceadds.cshtml", Model)

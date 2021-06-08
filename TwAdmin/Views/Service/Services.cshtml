@@ -1,0 +1,48 @@
+﻿@model TW.Models.AdminViewModel
+@{
+    ViewBag.Title = "Services";
+}
+
+<header class="content__title">
+    <h1>Service List</h1>
+    <div class="actions">
+        <a href="~/Service/InsertService" class="actions__item zmdi zmdi-plus zmdi-hc-fw" title="Create"></a>
+        <a href="~/Service/Services" class="actions__item zmdi zmdi-refresh zmdi-hc-fw" title="Refresh"></a>
+    </div>
+</header>
+
+<div class="card">
+    <div class="card-body">
+        <a href="~/Service/InsertService" class="btn btn-light btn--icon-text" title="Create"><i class="zmdi  zmdi-plus-circle-o zmdi-hc-fw"></i> Create New</a>
+
+        <div class="table-responsive">
+            <table id="data-table" class="table">
+                <thead style="color: #ffaa00">
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.ServiceList)
+                    {
+
+                        <tr>
+                            <td>@Html.Raw(@item.ServiceName)</td>
+                            <td>@Html.Raw(@item.Description)</td>
+                            <td>
+                                <img src="@item.ImageUrl" width="100" height="100" />
+                            </td>
+                            <td>
+                                @Html.ActionLink(" ", "UpdateService", new { Id = item.Id }, new { @class = "zmdi zmdi-edit", title = "Edit Item", data_toggle = "tooltip", data_placement = "top" })&nbsp;&nbsp;
+                                @Html.ActionLink(" ", "DeleteService", new { Id = item.Id }, new { @class = "zmdi zmdi-delete", title = "Delete Item", data_toggle = "tooltip", data_placement = "top", onclick = "return confirm('Are you sure you want to delete this item?')" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+﻿@model TW.Models.PublicViewModel
+@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="inner-heading">
+                    <ul class="breadcrumb">
+                        <li><a href="/Home/">Home</a> <i class="icon-angle-right"></i></li>
+                        <li><a href="/Home/ProductCategory">Product Category</a> <i class="icon-angle-right"></i></li>
+                        <li class="active">Products</li>
+                    </ul>
+                    <h2>@Html.Raw(Model.Project.ProjectName)</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@{
+    //var imagepath = "http://adminmzbd.thebyteheart.com/" + @Model.Project.ImageUrl;
+    var imagepath = @Model.Project.ImageUrl;
+}
+<div class="product-details-area fluid-padding-3 ptb-130">
+    <div class="container">
+        <div class="row">
+            <div class="span6">
+                <div class="product-details-img-content">
+                    <div class="product-details-tab mr-40">
+                        <div class="product-details-large tab-content">
+                            <div class="tab-pane active" id="pro-details1">
+                                <div class="easyzoom easyzoom--overlay">
+                                    <a href="@imagepath">
+                                        <img src="@imagepath" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-details-small nav mt-12 product-dec-slider owl-carousel">
+                            <a class="active" href="#pro-details1">
+                                <img src="assets/img/product-details/s1.jpg" alt="">
+                            </a>
+                            <a href="#pro-details2">
+                                <img src="assets/img/product-details/s2.jpg" alt="">
+                            </a>
+                            <a href="#pro-details3">
+                                <img src="assets/img/product-details/s3.jpg" alt="">
+                            </a>
+                            <a href="#pro-details4">
+                                <img src="assets/img/product-details/s4.jpg" alt="">
+                            </a>
+                            <a href="#pro-details5">
+                                <img src="assets/img/product-details/s3.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="product-details-content">
+                    <h2>@Model.Project.ProjectName</h2>
+                    @if (!string.IsNullOrEmpty(Model.Project.DiscountPrice.ToString()) && Model.Project.DiscountPrice > 0)
+                    {
+                        <div class="product-price">
+                            Price: <span class="strikeText">৳ @Model.Project.Price</span>
+                        </div>
+                        <div class="product-price">
+                            Discount Price: <span>৳ @Model.Project.DiscountPrice</span>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="product-price">
+                            <span>৳ @Model.Project.Price</span>
+                        </div>
+                    }
+                    <div class="product-overview">
+                        <h5 class="pd-sub-title">Product Overview</h5>
+                        <p>@Html.Raw(Model.Project.Description)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@Html.Partial("~/Views/Partial/_specialpriceadds.cshtml", Model)

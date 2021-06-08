@@ -1,0 +1,53 @@
+﻿@using TW.BusinessLayer
+@model TW.Models.AdminViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<header class="content__title">
+    <h1>Project List</h1>
+    <div class="actions">
+        <a href="~/Projects/Create" class="actions__item zmdi zmdi-plus zmdi-hc-fw" title="Create"></a>
+        <a href="~/Projects/Index" class="actions__item zmdi zmdi-refresh zmdi-hc-fw" title="Refresh"></a>
+    </div>
+</header>
+
+<div class="card">
+    <div class="card-body">
+        <a href="~/Projects/Create" class="btn btn-light btn--icon-text" title="Create"><i class="zmdi zmdi-plus-circle-o zmdi-hc-fw"></i> Create New</a>
+
+        <div class="table-responsive">
+            <table id="data-table" class="table">
+                <thead style="color: #ffaa00">
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Discount Price</th>
+                        <th>Image</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.ProjectList)
+                    {
+                        <tr>
+                            <td>@item.ProjectName</td>
+                            <td>@Html.Raw(ProjectManager.GetProjectCategoryById(item.ProjectCategoryId).Name)</td>
+                            <td>@item.Price</td>
+                            <td>@item.DiscountPrice</td>
+                            <td>
+                                <img src="@item.ImageUrl" width="100" height="100" />
+                            </td>
+                            <td>
+                                @Html.ActionLink(" ", "GetProjectImgById", new { Id = item.Id }, new { @class = "zmdi zmdi-edit", title = "Edit Item", data_toggle = "tooltip", data_placement = "top" })&nbsp;&nbsp;
+                                @Html.ActionLink(" ", "GalleryList", new { Id = item.Id }, new { @class = "zmdi zmdi-image-o" })<br />
+                                @Html.ActionLink(" ", "DeleteProject", new { Id = item.Id }, new { @class = "zmdi zmdi-delete", title = "Delete Item", data_toggle = "tooltip", data_placement = "top", onclick = "return confirm('Are you sure you want to delete this item?')" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

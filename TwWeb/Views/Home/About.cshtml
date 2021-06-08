@@ -1,0 +1,43 @@
+﻿@model TW.Models.PublicViewModel
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="inner-heading">
+                    <ul class="breadcrumb">
+                        <li><a href="/Home/">Home</a> <i class="icon-angle-right"></i></li>
+                        <li class="active">About</li>
+                    </ul>
+                    <h2>About Us</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="description-bg">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <h4 class="white-text">@Html.Raw(Model.AboutUs.Title)</h4>
+            </div>
+            <div class="span8 white-text">
+                @Html.Raw(Model.AboutUs.Description)
+            </div>
+            <div class="span4">
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- divider -->
+@*<div class="row">
+    <div class="span12">
+        <div class="solidline"></div>
+    </div>
+</div>*@
+<!-- end divider -->
