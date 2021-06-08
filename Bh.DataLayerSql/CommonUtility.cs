@@ -15,7 +15,7 @@ namespace BH.DataLayerSql
     public static class StoreProcedure
     {
         // Users
-        public static string GetUserByUsernamePassword = "sp_Getuserbyusernamenpassword";
+        public static string GetUserByUsernamePassword = "sp_GetUserByUsernamePassword";
 
         /*// Banner
         public static string GetBannerById = "sp_GetBannerDetails";

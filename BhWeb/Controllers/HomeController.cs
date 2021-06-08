@@ -5,15 +5,18 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web.Mvc;
 using Newtonsoft.Json;
-using TW.Models;
+using BH.Models;
 using Vereyon.Web;
 
-namespace TwWeb.Controllers
+namespace BhWeb.Controllers
 {
     public class HomeController : Controller
     {
 
-
+        public ActionResult Index()
+        {
+            return View();
+        }
 
 
 

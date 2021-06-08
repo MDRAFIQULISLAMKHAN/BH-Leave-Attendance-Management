@@ -1,0 +1,411 @@
+﻿        <!-- ============================================================== -->
+<!-- Page wrapper  -->
+<!-- ============================================================== -->
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb bg-white">
+        <div class="row align-items-center">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title">Dashboard</h4>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Three charts -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- employee details start -->
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-12">
+                <div class="white-box analytics-info">
+                    <h3 class="box-title">Timesheets</h3>
+                    <ul class="list-inline two-part d-flex align-items-center mb-0">
+                        <div class="col-sm-7">
+                            <div class="col-sm-12">
+                                <span class=" green">
+                                </span>
+                                <p class="d-inline">Approved</p>
+                                <p class="d-inline float-right">1</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <span class=" red">
+                                </span>
+                                <p class="d-inline">Rejected</p>
+                                <P class="d-inline float-right">0</P>
+                            </div>
+                            <div class="col-sm-12">
+                                <span class="yellow">
+                                </span>
+                                <p class="d-inline ">In Prpgress</p>
+                                <P class="d-inline float-right">0</P>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            pie chart here
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class=" white-box analytics-info">
+                    <h3 class="box-title">Leave Details</h3>
+                    <ul class="list-inline two-part d-flex align-items-center mb-0">
+                        <div class="col-sm-12">
+                            <div class="col-sm-12">
+                                <span class=" green">
+                                </span>
+                                <p class="d-inline">Approved</p>
+                                <p class="d-inline float-right">1</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <span class=" red">
+                                </span>
+                                <p class="d-inline">Rejected</p>
+                                <P class="d-inline float-right">0</P>
+                            </div>
+                            <div class="col-sm-12">
+                                <span class=" yellow">
+                                </span>
+                                <p class="d-inline ">In Prpgress</p>
+                                <P class="d-inline float-right">0</P>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="white-box analytics-info">
+                    <h3 class="box-title">Leave History</h3>
+                    <ul class="list-inline two-part d-flex align-items-center mb-0">
+                        <div class="col-sm-12">
+                            <span class=" green">
+                            </span>
+                            <p class="d-inline">Leaves Count</p>
+                            <p class="d-inline float-right">1</p>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- employee details end -->
+        <!-- ============================================================== -->
+        <!-- RECENT SALES -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-sm-4">
+                <div class="white-box">
+                    <div class="d-md-flex mb-3">
+                        <h3 class="box-title mb-0">All Timesheets</h3>
+                        <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">
+                            <button id="new" class="btn btn-success">
+                                <a class="text-decoration-none text-white" href="#">New</a>
+                            </button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-sm-12">
+                        <select class="form-select shadow-none row border-top">
+                            <option>--Filter--</option>
+                            <option>April 2021</option>
+                            <option>May 2021</option>
+                            <option>June 2021</option>
+                            <option>July 2021</option>
+                            <option>August 2021</option>
+                            <option>September 2021</option>
+                            <option>October 2021</option>
+                            <option>November 2021</option>
+                            <option>December 2021</option>
+                        </select>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table no-wrap">
+                            <thead>
+                                <tr>
+                                    <th class="border-top-0">Week</th>
+                                    <th class="border-top-0">From</th>
+                                    <th class="border-top-0">To</th>
+                                    <th class="border-top-0">Status</th>
+                                    <th class="border-top-0"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>23</td>
+                                    <td class="txt-oflo">31-May_2021</td>
+                                    <td class="txt-oflo">06-jun-2021</td>
+                                    <td><span class="text-success"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="text-success"><i class="far fa-arrow-alt-circle-right"></i></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="white-box">
+                    <div class="d-md-flex mb-3">
+                        <h3 class="box-title mb-0">All Leaves</h3>
+                        <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">
+                            <button class="btn btn-success">
+                                <a class="text-decoration-none text-white" href="#">New</a>
+                            </button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-sm-12">
+                        <select class="form-select shadow-none row border-top">
+                            <option>--Filter--</option>
+                            <option>April 2021</option>
+                        </select>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table no-wrap">
+                            <thead>
+                                <tr>
+                                    <th class="border-top-0">Week</th>
+                                    <th class="border-top-0">From</th>
+                                    <th class="border-top-0">To</th>
+                                    <th class="border-top-0">Status</th>
+                                    <th class="border-top-0"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>23</td>
+                                    <td class="txt-oflo">31-May_2021</td>
+                                    <td class="txt-oflo">06-jun-2021</td>
+                                    <td><span class="text-success"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="text-success"><i class="far fa-arrow-alt-circle-right"></i></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-8 col-sm-8">
+                <div class="white-box " id="create">
+                    <div>
+                        <button id="previ" class="btn btn-success mb-3"><a class="text-white text-decoration-none" href="">Previous</a></button>
+                    </div>
+                    <div class="d-md-flex mb-3 justify-content-center">
+                        <h3 class="box-title mb-0"> Timesheet</h3>
+                    </div>
+                    <div class="mb-3">
+                        <h4 class="pb-0 mb-0">Week:<span>23</span>&nbsp;&nbsp;&nbsp;&nbsp; From:<span>31-May_2021</span>&nbsp;&nbsp;&nbsp;&nbsp; To: <span>06-jun-2021</span>&nbsp;&nbsp;&nbsp;&nbsp; Status:<span>Approved</span> </h4>
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <label for="meeting-time">Select a Date:</label>
+                            <input type="date" id="pickdate">
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table no-wrap">
+                            <thead>
+                                <tr>
+                                    <th class="border-top-0">Day</th>
+                                    <th class="border-top-0">Date</th>
+                                    <th class="border-top-0">Regular Hours</th>
+                                    <th class="border-top-0">DTC-Holiday</th>
+                                    <th class="border-top-0">DayOFf</th>
+                                    <th class="border-top-0">Billing</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date1" aria-describedby="" placeholder="07-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-1" aria-describedby="" placeholder="0.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-1" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-1" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-1" aria-describedby="" placeholder="0.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date2" aria-describedby="" placeholder="08-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-2" aria-describedby="" placeholder="0.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-2" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-2" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-2" aria-describedby="" placeholder="0.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date3" aria-describedby="" placeholder="09-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-3" aria-describedby="" placeholder="0.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-3" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-3" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-3" aria-describedby="" placeholder="0.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Thrusday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date4" aria-describedby="" placeholder="10-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-4" aria-describedby="" placeholder="0.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-4" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-4" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-4" aria-describedby="" placeholder="0.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date5" aria-describedby="" placeholder="11-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-5" aria-describedby="" placeholder="0.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-5" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-5" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-5" aria-describedby="" placeholder="0.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date6" aria-describedby="" placeholder="12-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-6" aria-describedby="" placeholder="0.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-6" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-6" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-6" aria-describedby="" placeholder="0.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date7" aria-describedby="" placeholder="13-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-7" aria-describedby="" placeholder="0.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-7" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-7" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-7" aria-describedby="" placeholder="0.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="totalhours" aria-describedby="" placeholder="Total Hours"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="totalregularhours" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="totaldtc" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="totaldayoff" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="totalbilling" aria-describedby="" placeholder="0.0" readonly></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="form-group">
+                            <label for="comments">Comments</label>
+                            <textarea class="form-control mb-3" id="comments" rows="3" Value="Reason"></textarea>
+                            <div class="lastbtn d-md-flex mb-3 justify-content-end">
+                                <button type="button" id="draft" class="btn btn-warning">
+                                    Draft
+                                </button>
+                                <button type="button" id="submit" class="btn btn-success ml-2">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="white-box " id="show">
+                    <div class=" mb-3 ">
+                        <h3 class="box-title mb-0 d-inline"> Timesheet</h3>
+                        <button class="btn  btn-success float-right">
+                            <a class="text-white" href=""><i class="fas fa-edit"></i></a>
+                        </button>
+                    </div>
+                    <div class="mb-3">
+                        <h4 class="pb-0 mb-0">Week:<span>23</span>&nbsp;&nbsp;&nbsp;&nbsp; From:<span>31-May_2021</span>&nbsp;&nbsp;&nbsp;&nbsp; To: <span>06-jun-2021</span>&nbsp;&nbsp;&nbsp;&nbsp; Status:<span>Approved</span> </h4>
+                    </div>
+
+
+                    <div class="table-responsive">
+                        <table class="table no-wrap">
+                            <thead>
+                                <tr>
+                                    <th class="border-top-0">Day</th>
+                                    <th class="border-top-0">Date</th>
+                                    <th class="border-top-0">Regular Hours</th>
+                                    <th class="border-top-0">DTC-Holiday</th>
+                                    <th class="border-top-0">DayOFf</th>
+                                    <th class="border-top-0">Billing</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date1" aria-describedby="" placeholder="07-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-1" aria-describedby="" placeholder="8.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-1" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-1" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-1" aria-describedby="" placeholder="8.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date2" aria-describedby="" placeholder="08-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-2" aria-describedby="" placeholder="8.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-2" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-2" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-2" aria-describedby="" placeholder="8.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date3" aria-describedby="" placeholder="09-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-3" aria-describedby="" placeholder="8.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-3" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-3" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-3" aria-describedby="" placeholder="8.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Thrusday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date4" aria-describedby="" placeholder="10-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-4" aria-describedby="" placeholder="8.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-4" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-4" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-4" aria-describedby="" placeholder="8.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date5" aria-describedby="" placeholder="11-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-5" aria-describedby="" placeholder="8.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-5" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-5" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-5" aria-describedby="" placeholder="8.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date6" aria-describedby="" placeholder="12-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-6" aria-describedby="" placeholder="8.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-6" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-6" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-6" aria-describedby="" placeholder="8.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="date7" aria-describedby="" placeholder="13-Jun-2021"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="regularhours-7" aria-describedby="" placeholder="8.0"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dtc-7" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="dayoff-7" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="billing-7" aria-describedby="" placeholder="8.0" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="totalhours" aria-describedby="" placeholder="Total Hours"></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="totalregularhours" aria-describedby="" placeholder="40.00" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="totaldtc" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="totaldayoff" aria-describedby="" placeholder="0.0" readonly></td>
+                                    <td class="txt-oflo"><input type="text" class="form-control" id="totalbilling" aria-describedby="" placeholder="40.00" readonly></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- ============================================================== -->
+        <!-- Recent Comments -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Page wrapper  -->
+<!-- ============================================================== -->

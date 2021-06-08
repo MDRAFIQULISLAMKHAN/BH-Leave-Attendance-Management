@@ -1,0 +1,48 @@
+﻿@using Vereyon.Web
+@model BH.Models.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Login Form</title>
+    <link href="~/Content/CustomCss/LoginPageStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="login" style="margin-top: 10%">
+        <div class="login__block active" id="l-login">
+
+            @using (Html.BeginForm("Login", "Auth", FormMethod.Post, new { @class = "sign-up" }))
+            {
+
+                <h1 class="sign-up-title">
+                    <img src="~/img/nav-logo.png" style="width: 90%;" />
+                </h1>
+                @Html.RenderFlashMessages()
+                <div class="login__block__body">
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control text-center sign-up-input", placeholder = "What's your username?" })
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.Password, new { @class = "form-control text-center sign-up-input", type = "password", placeholder = "Your Password" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <input type="submit" value="Login" class="btn sign-up-button" />
+                </div>
+            }
+        </div>
+    </div>
+
+</body>
+</html>

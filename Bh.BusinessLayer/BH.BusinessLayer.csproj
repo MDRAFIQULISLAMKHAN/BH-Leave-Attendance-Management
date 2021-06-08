@@ -45,11 +45,11 @@
     <Compile Include="UserManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TW.DataLayerSql\BH.DataLayerSql.csproj">
+    <ProjectReference Include="..\Bh.DataLayerSql\BH.DataLayerSql.csproj">
       <Project>{b33e5ddf-4436-4e65-a4cc-e7c51e61417a}</Project>
       <Name>BH.DataLayerSql</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TW.Models\BH.Models.csproj">
+    <ProjectReference Include="..\Bh.Models\BH.Models.csproj">
       <Project>{2a8206a8-a649-4b4f-92b8-c08982111f12}</Project>
       <Name>BH.Models</Name>
     </ProjectReference>

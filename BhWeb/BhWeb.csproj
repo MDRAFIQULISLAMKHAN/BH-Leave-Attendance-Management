@@ -133,6 +133,7 @@
     <Content Include="Content\CustomCss\style.css" />
     <Content Include="Content\fonts\fontawesome\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\slick.svg" />
+    <Content Include="Content\CustomCss\LoginPageStyle.css" />
     <Content Include="Content\ThirdPartyCss\animate.css" />
     <Content Include="Content\ThirdPartyCss\bootstrap-responsive.css" />
     <Content Include="Content\ThirdPartyCss\bootstrap-responsive.min.css" />
@@ -154,6 +155,7 @@
     <Content Include="Content\ThirdPartyCss\slick.css" />
     <Content Include="fonts\fontawesome\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="img\nav-logo.png" />
     <Content Include="Scripts\CustomJs\custom.js" />
     <Content Include="Scripts\ThirdPartyJs\animate.js" />
     <Content Include="Scripts\ThirdPartyJs\bootstrap.js" />
@@ -197,7 +199,6 @@
     <Content Include="Scripts\ThirdPartyJs\portfolio\setting.js" />
     <Content Include="Scripts\ThirdPartyJs\slick.min.js" />
     <Content Include="Scripts\ThirdPartyJs\toucheffects.js" />
-    <Content Include="twaicon.ico" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -226,14 +227,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="img\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TW.BusinessLayer\BH.BusinessLayer.csproj">
+    <ProjectReference Include="..\Bh.BusinessLayer\BH.BusinessLayer.csproj">
       <Project>{b8feb4f5-5e30-4d53-bf46-443f1fc37ff2}</Project>
       <Name>BH.BusinessLayer</Name>
     </ProjectReference>
@@ -241,15 +241,15 @@
       <Project>{b33e5ddf-4436-4e65-a4cc-e7c51e61417a}</Project>
       <Name>BH.DataLayerSql</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TW.DataLayer\BH.DataLayer.csproj">
+    <ProjectReference Include="..\Bh.DataLayer\BH.DataLayer.csproj">
       <Project>{4490ffd2-37c4-4376-9130-c6e2fbef4e2f}</Project>
       <Name>BH.DataLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TW.Models\BH.Models.csproj">
+    <ProjectReference Include="..\Bh.Models\BH.Models.csproj">
       <Project>{2a8206a8-a649-4b4f-92b8-c08982111f12}</Project>
       <Name>BH.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TW.Utility\BH.Utility.csproj">
+    <ProjectReference Include="..\Bh.Utility\BH.Utility.csproj">
       <Project>{d0c34667-bbbe-43af-8788-a394904981e2}</Project>
       <Name>BH.Utility</Name>
     </ProjectReference>
