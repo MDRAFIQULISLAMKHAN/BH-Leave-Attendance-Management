@@ -7,8 +7,8 @@
     <ProjectGuid>{B8FEB4F5-5E30-4D53-BF46-443F1FC37FF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TW.BusinessLayer</RootNamespace>
-    <AssemblyName>TW.BusinessLayer</AssemblyName>
+    <RootNamespace>BH.BusinessLayer</RootNamespace>
+    <AssemblyName>BH.BusinessLayer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

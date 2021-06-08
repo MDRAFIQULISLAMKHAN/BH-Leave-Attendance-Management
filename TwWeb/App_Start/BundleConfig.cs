@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace TwWeb
+namespace BhWeb
 {
     public class BundleConfig
     {

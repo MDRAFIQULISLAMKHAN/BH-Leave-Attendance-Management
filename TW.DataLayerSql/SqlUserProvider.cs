@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using TW.DataLayer;
-using TW.Utility;
+using BH.DataLayer;
+using BH.DataLayerSql;
+using BH.Utility;
+using BH.DataLayerSql;
 
-namespace TW.DataLayerSql
+namespace BH.DataLayerSql
 {
     public class SqlUserProvider : IUserProvider
     {
-        public Models.User GetUserByUserNameNPassword(string username, string password)
+        public BH.Models.User GetUserByUserNameNPassword(string username, string password)
         {
             using (SqlConnection connection = new SqlConnection(CommonUtility.ConnectionString))
             {
@@ -21,8 +23,8 @@ namespace TW.DataLayerSql
                 {
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
-                    Models.User user = new Models.User();
-                    user = UtilityManager.DataReaderMap<Models.User>(reader);
+                    BH.Models.User user = new BH.Models.User();
+                    user = UtilityManager.DataReaderMap<BH.Models.User>(reader);
                     return user;
                 }
                 catch (Exception e)

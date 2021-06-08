@@ -7,8 +7,8 @@
     <ProjectGuid>{D0C34667-BBBE-43AF-8788-A394904981E2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TW.Utility</RootNamespace>
-    <AssemblyName>TW.Utility</AssemblyName>
+    <RootNamespace>BH.Utility</RootNamespace>
+    <AssemblyName>BH.Utility</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

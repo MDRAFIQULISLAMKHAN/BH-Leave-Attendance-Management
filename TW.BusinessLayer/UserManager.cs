@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TW.DataLayerSql;
-using TW.Models;
+﻿using BH.DataLayerSql;
+using BH.Models;
 
-namespace TW.BusinessLayer
+namespace BH.BusinessLayer
 {
     public class UserManager
     {

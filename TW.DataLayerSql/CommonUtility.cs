@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TW.DataLayerSql
+namespace BH.DataLayerSql
 {
     public class CommonUtility
     {
@@ -15,9 +15,9 @@ namespace TW.DataLayerSql
     public static class StoreProcedure
     {
         // Users
-        public static string GetUserByUsernamePassword = "sp_user_getuserbyusernamenpassword";
+        public static string GetUserByUsernamePassword = "sp_Getuserbyusernamenpassword";
 
-        // Banner
+        /*// Banner
         public static string GetBannerById = "sp_GetBannerDetails";
         public static string InsertBanner = "sp_InsertBanner";
         public static string UpdateBanner = "sp_UpdateBanner";
@@ -95,6 +95,6 @@ namespace TW.DataLayerSql
         public static string GetFeedbackById = "sp_GetFeedbackDetails";
         public static string InsertFeedback = "sp_InsertFeedback";
         public static string UpdateFeedback = "sp_UpdateFeedback";
-        public static string DeleteFeedback = "sp_DeleteFeedback";
+        public static string DeleteFeedback = "sp_DeleteFeedback";*/
     }
 }

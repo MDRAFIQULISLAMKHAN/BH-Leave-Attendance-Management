@@ -3,7 +3,7 @@ using BH.BusinessLayer;
 using BH.Models;
 using Vereyon.Web;
 
-namespace TwAdmin.Controllers
+namespace BhWeb.Controllers
 {
     public class AuthController : Controller
     {
@@ -36,6 +36,6 @@ namespace TwAdmin.Controllers
             }
 
             return View(user);
-        }
+         }
     }
 }

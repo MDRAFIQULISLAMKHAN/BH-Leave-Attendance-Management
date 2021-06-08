@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Web.UI.WebControls;
 
-namespace TW.Utility
+namespace BH.Utility
 { 
     public class UtilityManager
     {

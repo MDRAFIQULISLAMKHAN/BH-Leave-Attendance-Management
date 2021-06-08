@@ -2,8 +2,7 @@
 using System.IO;
 using System.Web;
 using System.Web.Mvc;
-using TW.BusinessLayer;
-using TW.Models;
+using BH.Models;
 using Vereyon.Web;
 
 namespace TwAdmin.Controllers

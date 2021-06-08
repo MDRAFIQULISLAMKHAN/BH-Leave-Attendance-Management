@@ -12,8 +12,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TwWeb</RootNamespace>
-    <AssemblyName>TwWeb</AssemblyName>
+    <RootNamespace>BhWeb</RootNamespace>
+    <AssemblyName>BhWeb</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -122,6 +122,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -153,69 +154,6 @@
     <Content Include="Content\ThirdPartyCss\slick.css" />
     <Content Include="fonts\fontawesome\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
-    <Content Include="img\about-bg.jpg" />
-    <Content Include="img\AboutUs.jpg" />
-    <Content Include="img\bg_direction_nav.png" />
-    <Content Include="img\camera\camera-loader.gif" />
-    <Content Include="img\camera\camera_skins.png" />
-    <Content Include="img\camera\patterns\overlay1.png" />
-    <Content Include="img\camera\patterns\overlay10.png" />
-    <Content Include="img\camera\patterns\overlay2.png" />
-    <Content Include="img\camera\patterns\overlay3.png" />
-    <Content Include="img\camera\patterns\overlay4.png" />
-    <Content Include="img\camera\patterns\overlay5.png" />
-    <Content Include="img\camera\patterns\overlay6.png" />
-    <Content Include="img\camera\patterns\overlay7.png" />
-    <Content Include="img\camera\patterns\overlay8.png" />
-    <Content Include="img\camera\patterns\overlay9.png" />
-    <Content Include="img\camera\patterns\_notes\dwsync.xml" />
-    <Content Include="img\category\fruits.png" />
-    <Content Include="img\category\lub.png" />
-    <Content Include="img\category\service-parts.png" />
-    <Content Include="img\category\tyres.png" />
-    <Content Include="img\giphy.gif" />
-    <Content Include="img\glyphicons-halflings-white.png" />
-    <Content Include="img\glyphicons-halflings.png" />
-    <Content Include="img\logo1.jpg" />
-    <Content Include="img\logo1.png" />
-    <Content Include="img\prettyPhoto\dark_rounded\btnNext.png" />
-    <Content Include="img\prettyPhoto\dark_rounded\btnPrevious.png" />
-    <Content Include="img\prettyPhoto\dark_rounded\contentPattern.png" />
-    <Content Include="img\prettyPhoto\dark_rounded\default_thumbnail.gif" />
-    <Content Include="img\prettyPhoto\dark_rounded\loader.gif" />
-    <Content Include="img\prettyPhoto\dark_rounded\sprite.png" />
-    <Content Include="img\prettyPhoto\dark_square\btnNext.png" />
-    <Content Include="img\prettyPhoto\dark_square\btnPrevious.png" />
-    <Content Include="img\prettyPhoto\dark_square\contentPattern.png" />
-    <Content Include="img\prettyPhoto\dark_square\default_thumbnail.gif" />
-    <Content Include="img\prettyPhoto\dark_square\loader.gif" />
-    <Content Include="img\prettyPhoto\dark_square\sprite.png" />
-    <Content Include="img\prettyPhoto\default\default_thumb.png" />
-    <Content Include="img\prettyPhoto\default\loader.gif" />
-    <Content Include="img\prettyPhoto\default\sprite.png" />
-    <Content Include="img\prettyPhoto\default\sprite_next.png" />
-    <Content Include="img\prettyPhoto\default\sprite_prev.png" />
-    <Content Include="img\prettyPhoto\default\sprite_x.png" />
-    <Content Include="img\prettyPhoto\default\sprite_y.png" />
-    <Content Include="img\prettyPhoto\facebook\btnNext.png" />
-    <Content Include="img\prettyPhoto\facebook\btnPrevious.png" />
-    <Content Include="img\prettyPhoto\facebook\contentPatternBottom.png" />
-    <Content Include="img\prettyPhoto\facebook\contentPatternLeft.png" />
-    <Content Include="img\prettyPhoto\facebook\contentPatternRight.png" />
-    <Content Include="img\prettyPhoto\facebook\contentPatternTop.png" />
-    <Content Include="img\prettyPhoto\facebook\default_thumbnail.gif" />
-    <Content Include="img\prettyPhoto\facebook\loader.gif" />
-    <Content Include="img\prettyPhoto\facebook\sprite.png" />
-    <Content Include="img\prettyPhoto\light_rounded\btnNext.png" />
-    <Content Include="img\prettyPhoto\light_rounded\btnPrevious.png" />
-    <Content Include="img\prettyPhoto\light_rounded\default_thumbnail.gif" />
-    <Content Include="img\prettyPhoto\light_rounded\loader.gif" />
-    <Content Include="img\prettyPhoto\light_rounded\sprite.png" />
-    <Content Include="img\prettyPhoto\light_square\btnNext.png" />
-    <Content Include="img\prettyPhoto\light_square\btnPrevious.png" />
-    <Content Include="img\prettyPhoto\light_square\default_thumbnail.gif" />
-    <Content Include="img\prettyPhoto\light_square\loader.gif" />
-    <Content Include="img\prettyPhoto\light_square\sprite.png" />
     <Content Include="Scripts\CustomJs\custom.js" />
     <Content Include="Scripts\ThirdPartyJs\animate.js" />
     <Content Include="Scripts\ThirdPartyJs\bootstrap.js" />
@@ -284,11 +222,12 @@
     <Content Include="Views\Partial\_specialpriceadds.cshtml" />
     <Content Include="Views\Home\Clients.cshtml" />
     <Content Include="Views\Home\SubCategory.cshtml" />
+    <Content Include="Views\Auth\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="img\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

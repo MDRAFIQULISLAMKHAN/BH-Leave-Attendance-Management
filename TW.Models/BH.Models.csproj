@@ -7,8 +7,8 @@
     <ProjectGuid>{2A8206A8-A649-4B4F-92B8-C08982111F12}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TW.Models</RootNamespace>
-    <AssemblyName>TW.Models</AssemblyName>
+    <RootNamespace>BH.Models</RootNamespace>
+    <AssemblyName>BH.Models</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminViewModel.cs" />
+    <Compile Include="mm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublicViewModel.cs" />
     <Compile Include="User.cs" />

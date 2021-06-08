@@ -7,8 +7,8 @@
     <ProjectGuid>{B33E5DDF-4436-4E65-A4CC-E7C51E61417A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TW.DataLayerSql</RootNamespace>
-    <AssemblyName>TW.DataLayerSql</AssemblyName>
+    <RootNamespace>BH.DataLayerSql</RootNamespace>
+    <AssemblyName>BH.DataLayerSql</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Web;
 
-namespace TW.Models
+namespace BH.Models
 {
     public class PublicViewModel
     {
